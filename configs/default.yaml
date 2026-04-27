@@ -1,0 +1,48 @@
+project:
+  name: depthpose-pilot
+  seed: 0
+
+data:
+  raw_dir: data/raw
+  labels_dir: data/labels
+  keep_every: 1            # 1 = keep every source frame (no fps subsampling)
+  image_size: [192, 256]   # (W, H) portrait, matches walker depth aspect
+  splits_path: data/splits/random_train0.8_seed0.json
+
+oracle:
+  backend: mmpose          # or: huggingface
+  checkpoint: vitpose-plus-base-cocowholebody
+  conf_threshold: 0.5
+  median_kernel: 3
+  joints:
+    - left_hip
+    - right_hip
+    - left_knee
+    - right_knee
+    - left_ankle
+    - right_ankle
+    - left_heel
+    - right_heel
+    - left_foot_tip
+    - right_foot_tip
+
+model:
+  backbone: mobilenetv2_100
+  num_joints: 6              # COCO-17 lower-body subset (hip/knee/ankle ×L/R)
+  num_deconv: 3              # stride 32 backbone → stride 4 heatmaps via 3 deconvs
+  deconv_channels: 256       # 5.2M params, ~8.8 GFLOPs (over brief cap; user-accepted)
+  softargmax_beta: 100.0
+
+training:
+  batch_size: 64
+  num_epochs: 200
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  warmup_pct: 0.05
+  num_workers: 4
+  log_dir: runs
+  aux_heatmap_loss_weight: 0.0   # pure 3D loss first (per brief); raise if unstable
+  grad_clip_norm: 1.0
+
+eval:
+  pck_thresholds_mm: [5, 10, 20, 50]

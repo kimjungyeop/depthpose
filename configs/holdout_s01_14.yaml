@@ -1,0 +1,45 @@
+project:
+  name: depthpose-holdout-s01-14
+  seed: 0
+
+data:
+  raw_dir: data/raw
+  labels_dir: data/labels
+  keep_every: 1
+  image_size: [192, 256]
+  splits_path: data/splits/holdout_s01_14.json   # KEY: leave-one-out split
+
+oracle:
+  backend: huggingface
+  checkpoint: usyd-community/vitpose-plus-base
+  conf_threshold: 0.5
+  median_kernel: 3
+  joints:
+    - left_hip
+    - right_hip
+    - left_knee
+    - right_knee
+    - left_ankle
+    - right_ankle
+
+model:
+  backbone: mobilenetv2_100
+  num_joints: 6
+  num_deconv: 3
+  deconv_channels: 256
+  softargmax_beta: 100.0
+
+training:
+  batch_size: 64
+  num_epochs: 100              # match run3 schedule for fair comparison
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  warmup_pct: 0.05
+  num_workers: 4
+  log_dir: runs
+  aux_heatmap_loss_weight: 0.1
+  anatomical_loss_weight: 1.0  # same as run3 — we want a fair compare
+  grad_clip_norm: 1.0
+
+eval:
+  pck_thresholds_mm: [5, 10, 20, 50]

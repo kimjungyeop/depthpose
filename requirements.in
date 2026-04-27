@@ -1,0 +1,40 @@
+# Loose top-level deps. Pin with: pip-compile requirements.in -o requirements.txt
+# Phase 1 only requires the data/oracle/CLI stack. Model/training deps are
+# kept here because the same venv runs Phase 2.
+
+# Core numerics + IO
+numpy
+scipy   # required by transformers' VitPoseImageProcessor (scipy_warp_affine)
+pandas
+pyarrow
+opencv-python
+matplotlib
+pyyaml
+
+# RealSense bag playback (Phase 1)
+pyrealsense2
+
+# DL stack (Phase 2; included now so one venv covers all phases)
+torch
+torchvision
+timm
+
+# Config / CLI / logging
+pydantic>=2
+typer
+tensorboard
+
+# Oracle (will install one of these depending on which path we land on)
+# mmpose itself is fragile under Python 3.11/3.12; install manually after
+# pip-compile resolves the rest.
+transformers
+huggingface_hub
+
+# Export (Phase 4)
+onnx
+onnxruntime
+
+# Tooling
+pytest
+ruff
+pip-tools

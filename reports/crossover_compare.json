@@ -1,0 +1,78 @@
+{
+  "run1_baseline": {
+    "n_total_frames": 7112,
+    "n_test_frames": 1421,
+    "frac_hk_crossover": 0.005343082114735658,
+    "frac_ka_crossover": 0.0022497187851518562,
+    "frac_ha_crossover": 0.006186726659167604,
+    "frac_any_crossover": 0.006889763779527559,
+    "test_mpjpe_overall_mm": 22.451688766479492,
+    "test_mpjpe_per_joint_mm": {
+      "left_hip": 24.12937758773659,
+      "right_hip": 27.150078888436482,
+      "left_knee": 21.426338086497136,
+      "right_knee": 23.664259897686833,
+      "left_ankle": 21.280276893135174,
+      "right_ankle": 22.035332306338027
+    },
+    "per_session_crossover_count": {
+      "1": 4,
+      "12": 4,
+      "13": 25,
+      "3": 9,
+      "4": 5,
+      "6": 1,
+      "9": 1
+    }
+  },
+  "run2_aux2d": {
+    "n_total_frames": 7112,
+    "n_test_frames": 1421,
+    "frac_hk_crossover": 0.006749156355455568,
+    "frac_ka_crossover": 0.001546681664791901,
+    "frac_ha_crossover": 0.005764904386951631,
+    "frac_any_crossover": 0.00703037120359955,
+    "test_mpjpe_overall_mm": 22.448270797729492,
+    "test_mpjpe_per_joint_mm": {
+      "left_hip": 30.988176508280755,
+      "right_hip": 24.73379287968241,
+      "left_knee": 21.597263106643982,
+      "right_knee": 23.49731149911032,
+      "left_ankle": 19.806622655697097,
+      "right_ankle": 22.475011003521125
+    },
+    "per_session_crossover_count": {
+      "1": 3,
+      "12": 4,
+      "13": 25,
+      "3": 9,
+      "4": 5,
+      "6": 3,
+      "9": 1
+    }
+  },
+  "run3_anatomical": {
+    "n_total_frames": 7112,
+    "n_test_frames": 1421,
+    "frac_hk_crossover": 0.00140607424071991,
+    "frac_ka_crossover": 0.001546681664791901,
+    "frac_ha_crossover": 0.002109111361079865,
+    "frac_any_crossover": 0.002530933633295838,
+    "test_mpjpe_overall_mm": 21.94144058227539,
+    "test_mpjpe_per_joint_mm": {
+      "left_hip": 25.69797879288249,
+      "right_hip": 25.062458647190553,
+      "left_knee": 21.491131189559457,
+      "right_knee": 23.21732234208185,
+      "left_ankle": 19.83795697319533,
+      "right_ankle": 21.701481349031692
+    },
+    "per_session_crossover_count": {
+      "1": 3,
+      "12": 2,
+      "13": 4,
+      "3": 5,
+      "4": 4
+    }
+  }
+}

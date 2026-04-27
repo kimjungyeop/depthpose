@@ -1,0 +1,982 @@
+[
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/realsense_vertical_1.bag",
+    "file_size_bytes": 671536237,
+    "duration_s": 13.44301,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 388,
+        "first_timestamp_ms": 1588651343763.1501,
+        "last_timestamp_ms": 1588651357170.9524,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 1280,
+        "height": 720,
+        "frame_count": 388,
+        "first_timestamp_ms": 1588651343705.3616,
+        "last_timestamp_ms": 1588651357144.6917,
+        "intrinsics": {
+          "width": 1280,
+          "height": 720,
+          "fx": 915.5194702148438,
+          "fy": 915.5245361328125,
+          "cx": 627.7619018554688,
+          "cy": 365.0685729980469,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/realsense_vertical_1_mid.png",
+    "sample_frame_index": 201,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/realsense_vertical_2.bag",
+    "file_size_bytes": 608489565,
+    "duration_s": 15.860257,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 348,
+        "first_timestamp_ms": 1588651402631.0828,
+        "last_timestamp_ms": 1588651418296.6936,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 1280,
+        "height": 720,
+        "frame_count": 348,
+        "first_timestamp_ms": 1588651402576.9717,
+        "last_timestamp_ms": 1588651418227.224,
+        "intrinsics": {
+          "width": 1280,
+          "height": 720,
+          "fx": 915.5194702148438,
+          "fy": 915.5245361328125,
+          "cx": 627.7619018554688,
+          "cy": 365.0685729980469,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/realsense_vertical_2_mid.png",
+    "sample_frame_index": 237,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/realsense_vertical_3.bag",
+    "file_size_bytes": 639745378,
+    "duration_s": 19.221718,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 361,
+        "first_timestamp_ms": 1588652801103.6052,
+        "last_timestamp_ms": 1588652820076.4614,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 1280,
+        "height": 720,
+        "frame_count": 361,
+        "first_timestamp_ms": 1588652801042.5354,
+        "last_timestamp_ms": 1588652820262.4915,
+        "intrinsics": {
+          "width": 1280,
+          "height": 720,
+          "fx": 915.5194702148438,
+          "fy": 915.5245361328125,
+          "cx": 627.7619018554688,
+          "cy": 365.0685729980469,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/realsense_vertical_3_mid.png",
+    "sample_frame_index": 288,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/realsense_vertical_4.bag",
+    "file_size_bytes": 1008392640,
+    "duration_s": 18.153006,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 630,
+        "first_timestamp_ms": 1588652837616.0896,
+        "last_timestamp_ms": 1588652855589.5557,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 1280,
+        "height": 720,
+        "frame_count": 630,
+        "first_timestamp_ms": 1588652837554.9915,
+        "last_timestamp_ms": 1588652855671.0754,
+        "intrinsics": {
+          "width": 1280,
+          "height": 720,
+          "fx": 915.5194702148438,
+          "fy": 915.5245361328125,
+          "cx": 627.7619018554688,
+          "cy": 365.0685729980469,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/realsense_vertical_4_mid.png",
+    "sample_frame_index": 272,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/realsense_vertical_5.bag",
+    "file_size_bytes": 381744178,
+    "duration_s": 9.791551,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 216,
+        "first_timestamp_ms": 1588652874797.3254,
+        "last_timestamp_ms": 1588652884334.605,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 1280,
+        "height": 720,
+        "frame_count": 216,
+        "first_timestamp_ms": 1588652874751.8403,
+        "last_timestamp_ms": 1588652884492.8774,
+        "intrinsics": {
+          "width": 1280,
+          "height": 720,
+          "fx": 915.5194702148438,
+          "fy": 915.5245361328125,
+          "cx": 627.7619018554688,
+          "cy": 365.0685729980469,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/realsense_vertical_5_mid.png",
+    "sample_frame_index": 146,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/rs_along_and_down_incline.bag",
+    "file_size_bytes": 647486724,
+    "duration_s": 23.279941,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 633,
+        "first_timestamp_ms": 1588793504995.934,
+        "last_timestamp_ms": 1588793528242.4326,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 633,
+        "first_timestamp_ms": 1588793504953.163,
+        "last_timestamp_ms": 1588793528169.841,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 610.3462524414062,
+          "fy": 610.3496704101562,
+          "cx": 415.84124755859375,
+          "cy": 243.37904357910156,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/rs_along_and_down_incline_mid.png",
+    "sample_frame_index": 349,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/rs_blue_car_light_change.bag",
+    "file_size_bytes": 398648751,
+    "duration_s": 8.870902,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 389,
+        "first_timestamp_ms": 1588793830848.0476,
+        "last_timestamp_ms": 1588793839686.3865,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 389,
+        "first_timestamp_ms": 1588793830804.4592,
+        "last_timestamp_ms": 1588793839644.1423,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 610.3462524414062,
+          "fy": 610.3496704101562,
+          "cx": 415.84124755859375,
+          "cy": 243.37904357910156,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/rs_blue_car_light_change_mid.png",
+    "sample_frame_index": 133,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/rs_bumpy_stone_walk.bag",
+    "file_size_bytes": 459837859,
+    "duration_s": 19.311422,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 449,
+        "first_timestamp_ms": 1588793438457.9817,
+        "last_timestamp_ms": 1588793457735.6223,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 449,
+        "first_timestamp_ms": 1588793438405.0876,
+        "last_timestamp_ms": 1588793457685.66,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 610.3462524414062,
+          "fy": 610.3496704101562,
+          "cx": 415.84124755859375,
+          "cy": 243.37904357910156,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/rs_bumpy_stone_walk_mid.png",
+    "sample_frame_index": 289,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/rs_dark_to_light.bag",
+    "file_size_bytes": 448824293,
+    "duration_s": 15.573814,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 439,
+        "first_timestamp_ms": 1588793657449.3638,
+        "last_timestamp_ms": 1588793672991.486,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 439,
+        "first_timestamp_ms": 1588793657418.5088,
+        "last_timestamp_ms": 1588793672990.5942,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 610.3462524414062,
+          "fy": 610.3496704101562,
+          "cx": 415.84124755859375,
+          "cy": 243.37904357910156,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/rs_dark_to_light_mid.png",
+    "sample_frame_index": 233,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/rs_fast_circle_varying_bg.bag",
+    "file_size_bytes": 396609084,
+    "duration_s": 13.807824,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 387,
+        "first_timestamp_ms": 1588793785455.576,
+        "last_timestamp_ms": 1588793799230.0137,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 387,
+        "first_timestamp_ms": 1588793785405.0813,
+        "last_timestamp_ms": 1588793799148.2573,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 610.3462524414062,
+          "fy": 610.3496704101562,
+          "cx": 415.84124755859375,
+          "cy": 243.37904357910156,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/rs_fast_circle_varying_bg_mid.png",
+    "sample_frame_index": 207,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/rs_gravel_driveway.bag",
+    "file_size_bytes": 327260406,
+    "duration_s": 11.706661,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 319,
+        "first_timestamp_ms": 1588793737761.7112,
+        "last_timestamp_ms": 1588793749435.018,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 319,
+        "first_timestamp_ms": 1588793737703.96,
+        "last_timestamp_ms": 1588793749379.042,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 610.3462524414062,
+          "fy": 610.3496704101562,
+          "cx": 415.84124755859375,
+          "cy": 243.37904357910156,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/rs_gravel_driveway_mid.png",
+    "sample_frame_index": 175,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/rs_kitchen_loop.bag",
+    "file_size_bytes": 1193300986,
+    "duration_s": 44.391444,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 1168,
+        "first_timestamp_ms": 1588793191483.8938,
+        "last_timestamp_ms": 1588793235775.7776,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 1168,
+        "first_timestamp_ms": 1588793191445.9773,
+        "last_timestamp_ms": 1588793235814.9146,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 610.3462524414062,
+          "fy": 610.3496704101562,
+          "cx": 415.84124755859375,
+          "cy": 243.37904357910156,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/rs_kitchen_loop_mid.png",
+    "sample_frame_index": 665,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/rs_kitchen_to_deck.bag",
+    "file_size_bytes": 1152506960,
+    "duration_s": 40.715026,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 1128,
+        "first_timestamp_ms": 1588793300846.2576,
+        "last_timestamp_ms": 1588793341502.7156,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 1128,
+        "first_timestamp_ms": 1588793300805.7817,
+        "last_timestamp_ms": 1588793341501.7837,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 610.3462524414062,
+          "fy": 610.3496704101562,
+          "cx": 415.84124755859375,
+          "cy": 243.37904357910156,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/rs_kitchen_to_deck_mid.png",
+    "sample_frame_index": 610,
+    "error": null
+  },
+  {
+    "bag_path": "/home/farandhigh-ubuntu/Documents/cv/depth-pose-tracking/raw_data/rs_up_incline.bag",
+    "file_size_bytes": 412109203,
+    "duration_s": 14.752426,
+    "device_name": "Intel RealSense D435I",
+    "device_serial": "927522071129",
+    "firmware_version": "05.12.03.00",
+    "depth_scale_m_per_unit": 0.0010000000474974513,
+    "streams": [
+      {
+        "name": "Depth",
+        "stream_type": "depth",
+        "format": "z16",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 403,
+        "first_timestamp_ms": 1588793541316.5745,
+        "last_timestamp_ms": 1588793556058.2834,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 427.3739929199219,
+          "fy": 427.3739929199219,
+          "cx": 421.7892150878906,
+          "cy": 242.46548461914062,
+          "model": "brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "name": "Color",
+        "stream_type": "color",
+        "format": "rgb8",
+        "fps": 30,
+        "width": 848,
+        "height": 480,
+        "frame_count": 403,
+        "first_timestamp_ms": 1588793541279.3293,
+        "last_timestamp_ms": 1588793555956.567,
+        "intrinsics": {
+          "width": 848,
+          "height": 480,
+          "fx": 610.3462524414062,
+          "fy": 610.3496704101562,
+          "cx": 415.84124755859375,
+          "cy": 243.37904357910156,
+          "model": "inverse_brown_conrady",
+          "coeffs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "has_color": true,
+    "has_depth": true,
+    "sample_frame_path": "reports/inspect/samples/rs_up_incline_mid.png",
+    "sample_frame_index": 221,
+    "error": null
+  }
+]

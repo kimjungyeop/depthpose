@@ -1,0 +1,40 @@
+# Data and runs (large; reproduced from raw_data/)
+raw_data/
+raw_data_untrained/
+data/
+runs/
+
+# Workspace / agent state (machine-specific)
+.claude/
+.codex
+.codex/
+
+# Source-quality videos (regenerable from runs/run3_anatomical via render_video.py;
+# the deployed copies live in dist/videos/ and ARE committed)
+reports/videos/
+reports/videos_v1/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Build / export artefacts
+*.onnx
+*.engine
+*.plan
+*.trt
+
+# Misc
+*.log
+*.tmp
