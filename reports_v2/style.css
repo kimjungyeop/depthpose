@@ -1,0 +1,191 @@
+/* depthpose blog style — Distill/MIT-inspired, monospace headings, generous whitespace */
+:root {
+  --text: #1a1a1a;
+  --muted: #555;
+  --accent: #0066cc;
+  --rule: #e6e6e6;
+  --bg: #fdfdfd;
+  --code-bg: #f4f4f4;
+  --max-width: 720px;
+}
+
+html { font-size: 17px; }
+body {
+  font-family: 'Charter', 'Georgia', 'Times New Roman', serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.2rem 4rem 1.2rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+header.title-block-header { margin-top: 1rem; margin-bottom: 1.5rem; }
+
+h1, h2, h3, h4 {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+h1.title {
+  font-size: 1.9rem;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: -0.01em;
+}
+
+p.subtitle, p.author {
+  color: var(--muted);
+  font-style: italic;
+  margin: 0.2rem 0;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+h3 {
+  font-size: 1.1rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+p { margin: 0.8rem 0; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,102,204,0.25);
+}
+a:hover { border-bottom-color: var(--accent); }
+
+ul, ol { padding-left: 1.4rem; }
+li { margin-bottom: 0.3rem; }
+
+strong { font-weight: 600; }
+
+code {
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--code-bg);
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+}
+pre code {
+  display: block;
+  padding: 0.8em 1em;
+  overflow-x: auto;
+  background: var(--code-bg);
+}
+
+/* Figures: pandoc puts images in <p><img></p>, with the next paragraph as caption */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.2rem auto 0.4rem auto;
+  border-radius: 3px;
+}
+
+/* Pandoc auto-generates a <figcaption> from image alt text — hide it; we use the italic paragraph below instead */
+figcaption { display: none; }
+figure { margin: 1.2rem 0 0 0; }
+
+/* Side-by-side videos (matches the original dist/ structure) */
+.video-grid { margin: 1.2rem 0 0.4rem 0; }
+.video-grid .video-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.video-cell { flex: 1 1 45%; min-width: 220px; }
+.video-cell video {
+  width: 100%;
+  height: auto;
+  background: #000;
+  display: block;
+  border-radius: 3px;
+}
+.video-label {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-top: 0.3rem;
+  text-align: left;
+  line-height: 1.35;
+}
+.video-mpjpe { color: var(--muted); }
+
+/* Italic-only paragraphs are our figure captions */
+p > em:only-child {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: left;
+  margin: 0 auto 1.4rem auto;
+  padding: 0.4rem 0.6rem;
+  border-left: 2px solid var(--rule);
+  font-style: normal;
+}
+p > em:only-child * { font-style: normal; }
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+th {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--text);
+}
+
+/* Footnotes (pandoc renders [^x] into <sup><a>) — these are our references */
+.footnotes {
+  margin-top: 2.4rem;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.footnotes hr { display: none; }
+.footnotes::before {
+  content: "References";
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--text);
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+.footnotes ol { padding-left: 1.5rem; }
+.footnotes li { margin-bottom: 0.4rem; }
+
+/* Hero image: first image is full bleed-ish */
+main > p:nth-of-type(1) img,
+header + p img {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  body { padding: 0 1rem; }
+  h1.title { font-size: 1.5rem; }
+}
