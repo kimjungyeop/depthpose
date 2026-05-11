@@ -9,10 +9,8 @@ runs/
 .codex
 .codex/
 
-# Source-quality videos (regenerable from runs/run3_anatomical via render_video.py;
-# the deployed copies live in dist/videos/ and ARE committed)
-reports/videos/
-reports/videos_v1/
+# Project guidelines + grading rubric (kept locally, not in repo)
+/guidelines/
 
 # Python
 __pycache__/
