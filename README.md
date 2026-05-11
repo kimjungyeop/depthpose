@@ -13,8 +13,8 @@ recording the model has never seen (95% bootstrap CI [37.7, 41.3] mm
 over n = 401 frames; 5,000 replicates), with cadence within 2.0% and
 stride period within 1.9% of the oracle. **0.95 ms** inference on
 RTX A5000 (ONNX Runtime CUDA fp32); projected **5–10 ms** on Jetson
-Xavier NX with TensorRT FP16. Full report: open `dist/index.html` in a
-browser, or read `reports/blog.md`.
+Xavier NX with TensorRT FP16. Full report: open `reports_v2/index.html`
+in a browser, or read `reports_v2/blog.md`.
 
 ## Setup
 
@@ -51,7 +51,7 @@ python -m depthpose.data.extract_bag --bag raw_data/<x>.bag \
 python -m depthpose.oracle.run --session data/raw/S01/1 \
     --out data/labels/S01/1.parquet
 
-# Visual validation contact sheet
+# Visual validation contact sheet (writes to reports/oracle_validate/)
 python -m depthpose.oracle.validate --session data/raw/S01/1 \
     --labels data/labels/S01/1.parquet
 ```
@@ -80,32 +80,36 @@ python -m depthpose.figures.render_video --session S01/14 \
 python -m depthpose.figures.build_html
 ```
 
+Analysis scripts above write to a local `reports/` directory; that
+directory is gitignored. The curated submission lives in `reports_v2/`.
+
 ## Layout
 
 ```
-depthpose/   # data, oracle, model, training, eval, export, figures
-configs/     # YAML run configs validated by pydantic (run1..run4)
-reports/     # blog.md, supporting JSON, figures, oracle_validate/
-dist/        # submission bundle: rendered HTML + figures + 2 demo videos
-tests/       # regression-critical units (lift, extract, dataset, loss, gait, ...)
-raw_data/    # source .bag files (gitignored)
-data/        # extracted sessions + label cache (gitignored)
-runs/        # training outputs (gitignored)
+depthpose/    # data, oracle, model, training, eval, export, figures
+configs/      # YAML run configs validated by pydantic (run1..run4)
+reports_v2/   # submission bundle: blog.md, index.html, style.css, figures/, videos/
+tests/        # regression-critical units (lift, extract, dataset, loss, gait, ...)
+raw_data/     # source .bag files (gitignored)
+data/         # extracted sessions + label cache (gitignored)
+runs/         # training outputs (gitignored)
+reports/      # analysis outputs from eval scripts (gitignored; re-generated on demand)
+guidelines/   # project guidelines + grading rubric (gitignored; local only)
 ```
 
 ## Status
 
-- **Phase 1 — data + oracle.** Done. 14 bags extracted, ViTPose++ run on all sessions, contact-sheet validation in `reports/oracle_validate/`. Color-aligned-to-depth at extraction so (u, v) directly indexes the depth frame; hips often land in the depth-FOV gap and are flagged `depth_valid = False` rather than extrapolated. Oracle joints: 6 of COCO-17 lower-body (left/right × hip/knee/ankle).
+- **Phase 1 — data + oracle.** Done. 14 bags extracted, ViTPose++ run on all sessions. Color-aligned-to-depth at extraction so (u, v) directly indexes the depth frame; hips often land in the depth-FOV gap and are flagged `depth_valid = False` rather than extrapolated. Oracle joints: 6 of COCO-17 lower-body (left/right × hip/knee/ankle). Contact-sheet validation regenerable via `depthpose.oracle.validate`.
 - **Phase 2 — training.** Done. Four runs:
   - `runs/run1_baseline` (200 ep, pure 3D Smooth-L1, random 80/20 per-frame split) — MPJPE 22.5 mm.
   - `runs/run2_aux2d` (100 ep, + aux 2D heatmap MSE × 0.1) — MPJPE 22.5 mm in half the wall time.
   - `runs/run3_anatomical` (100 ep, + lateral-consistency hinge × 1.0) — MPJPE 21.9 mm; hip-knee crossover 38/7,112 → 10/7,112 (3.8× reduction).
-  - **`runs/run4_holdout_s01_14`** (100 ep, leave-one-bag-out: train on S01/1..13, test on S01/14) — **MPJPE 39.6 mm on the held-out bag** (95% bootstrap CI [37.7, 41.3] mm; provenance in `reports/holdout_s01_14_bootstrap.json`). Canonical model for the deployment claim; `runs/run3_anatomical` is the canonical model for the in-distribution ablations.
-- **Phase 3 — eval / gait.** Done. On the held-out bag: cadence relative error **2.0 %**, stride period relative error **1.9 %**, hip-knee crossover **0.00 %**, every per-joint MPJPE under the 50 mm clinical-usability goal. See `reports/holdout_s01_14_compare.json`, `reports/h2_compare.json`, `reports/outlier_analysis.md`.
+  - **`runs/run4_holdout_s01_14`** (100 ep, leave-one-bag-out: train on S01/1..13, test on S01/14) — **MPJPE 39.6 mm on the held-out bag** (95% bootstrap CI [37.7, 41.3] mm). Canonical model for the deployment claim; `runs/run3_anatomical` is the canonical model for the in-distribution ablations.
+- **Phase 3 — eval / gait.** Done. On the held-out bag: cadence relative error **2.0 %**, stride period relative error **1.9 %**, hip-knee crossover **0.00 %**, every per-joint MPJPE under the 50 mm clinical-usability goal. Comparison + bootstrap scripts regenerate `reports/holdout_s01_14_compare.json`, `reports/holdout_s01_14_bootstrap.json`, `reports/h2_compare.json` on demand.
 - **Phase 4 — export + benchmark.** Done. `runs/run3_anatomical/student.onnx` (19.9 MB, opset 17, 5.22 M params). Latency on RTX A5000: ONNX-RT CPU 1-thread **24 ms / 41 fps**, ONNX-RT CUDA fp32 **0.95 ms / 1053 fps**, TensorRT FP16 **0.95 ms**. Projected Jetson Xavier NX TRT FP16: **5–10 ms** (~10× faster than the 125 M-param oracle on the same edge silicon).
-- **Phase 5 — figures + blog.** Done. Blog at `reports/blog.md`; rendered HTML at `dist/index.html`; figures in `reports/figures/`; two demo videos in `dist/videos/` (`S01_7.mp4` best in-distribution clip, `S01_14_holdout.mp4` the truly held-out bag) with live cadence/stride HUDs.
+- **Phase 5 — figures + blog.** Done. Blog at `reports_v2/blog.md`; rendered HTML at `reports_v2/index.html`; figures in `reports_v2/figures/`; two demo videos in `reports_v2/videos/` (`S01_7.mp4` best in-distribution clip, `S01_14_holdout.mp4` the truly held-out bag) with live cadence/stride HUDs.
 
 ## Submission
 
-Open `dist/index.html` in a browser. The directory is self-contained
-(no internet required). Zip `dist/` for hand-in.
+Open `reports_v2/index.html` in a browser. The directory is
+self-contained (no internet required). Zip `reports_v2/` for hand-in.
